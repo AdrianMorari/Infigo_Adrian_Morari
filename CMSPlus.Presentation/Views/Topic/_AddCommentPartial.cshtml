@@ -5,11 +5,11 @@
         @Html.Hidden("TopicSystemName", Model.TopicSystemName)
         <div class="mb-3">
             <label asp-for="FullName" class="form-label">Full name</label>
-            <input type="text" class="form-control" id="FullName" asp-for="FullName" placeholder="John Doe">
+            <input type="text" class="form-control" id="FullName" asp-for="FullName" required="required" placeholder="John Doe">
         </div>
         <div class="mb-3">
             <label asp-for="Comment" class="form-label">Comment</label>
-            <textarea class="form-control" id="Comment" asp-for="Comment" rows="3"></textarea>
+            <textarea class="form-control" id="Comment" asp-for="Comment" required="required" rows="3"></textarea>
         </div>
     </div>
     <div class="card-footer"><button type="submit" class="btn btn-primary">Add comment</button></div>
