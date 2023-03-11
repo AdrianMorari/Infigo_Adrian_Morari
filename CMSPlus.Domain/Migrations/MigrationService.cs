@@ -1,7 +1,5 @@
-using System.Configuration;
 using CMSPlus.Domain.Interfaces;
 using Microsoft.Data.SqlClient;
-using System.Configuration;
 using System.Reflection;
 using EvolveDb;
 
