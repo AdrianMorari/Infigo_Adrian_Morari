@@ -2,6 +2,7 @@
 
 public class CommentModel
 {
+    public string TopicSystemName { get; set; } = null!;
     public string FullName { get; set; } = null!;
     public string Comment { get; set; } = null!;
 }
