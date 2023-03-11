@@ -10,7 +10,7 @@ public class CommentEntityConfiguration : IEntityTypeConfiguration<CommentEntity
     {
         builder.ToTable("Comments");
         builder.HasOne(c => c.Topic)
-            .WithMany()
+            .WithMany(c => c.Comments)
             .HasForeignKey(c => c.TopicId);
         builder.Property(x => x.FullName).IsRequired();
         builder.Property(x => x.Comment).IsRequired();

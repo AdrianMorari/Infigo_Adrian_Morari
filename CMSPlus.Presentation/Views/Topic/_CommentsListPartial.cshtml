@@ -1,16 +1,15 @@
-﻿@model CMSPlus.Domain.Models.CommentModels.CommentModel
+﻿@using CMSPlus.Domain.Models.CommentModels;
+@model List<CommentModel>
 
 <div class="card mt-2">
     <div class="card-body">
-        <div class="mb-3">
-            <p>{Comment}</p>
-            <p>Posted by {FullName} on {Date}</p>
-            <hr />
-        </div>
-        <div class="mb-3">
-            <p>{Comment}</p>
-            <p>Posted by {FullName} on {Date}</p>
-            <hr />
-        </div>
+        @foreach(var comment in Model.OrderByDescending(x => x.CreatedOnUtc))
+        {
+            <div class="mb-3">
+                <p>@comment.Comment</p>
+                <p>Posted by @comment.FullName on @comment.CreatedOnUtc</p>
+                <hr />
+            </div>
+        }
     </div>
 </div>

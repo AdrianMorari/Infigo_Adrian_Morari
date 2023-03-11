@@ -9,6 +9,6 @@ public class CommentProfile : Profile
     public CommentProfile()
     {
         CreateMap<CommentEntity, CommentModel>();
-        CreateMap<CommentModel, CommentEntity>();
+        CreateMap<CommentModel, CommentEntity>().ForMember(x => x.CreatedOnUtc, opt => opt.Ignore());
     }
 }

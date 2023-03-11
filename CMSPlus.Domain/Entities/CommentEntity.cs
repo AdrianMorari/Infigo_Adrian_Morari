@@ -6,4 +6,5 @@ public class CommentEntity : BaseEntity
     public virtual TopicEntity Topic { get; set; } 
     public string FullName { get; set; } = null!;
     public string Comment { get; set; } = null!;
+
 }

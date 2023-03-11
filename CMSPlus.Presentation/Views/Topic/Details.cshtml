@@ -17,7 +17,9 @@
     </div>
 
     @await Html.PartialAsync("_AddCommentPartial", new CommentModel { TopicSystemName = Model.SystemName })
-    @*@await Html.PartialAsync("_CommentsListPartial", new CommentModel { TopicSystemName = Model.SystemName })*@
-    
+    @if (Model.Comments.Any())
+    {
+        @await Html.PartialAsync("_CommentsListPartial", Model.Comments)
+    }
 
 </div>
